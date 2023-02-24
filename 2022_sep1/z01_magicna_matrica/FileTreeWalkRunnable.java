@@ -38,6 +38,6 @@ public class FileTreeWalkRunnable implements Runnable {
                 this.workQueue.put(path);
             }
         }
-
+        dStream.close();
     }
 }

@@ -25,6 +25,7 @@ public class MnozenjeMatricaMain {
             printMatrix(mat2);
 
             int[][] product = multipyMatrix(mat1, mat2);
+            System.out.println("Matrix product: ");
             printMatrix(product);
 
         } catch (FileNotFoundException | IllegalArgumentException e) {
@@ -61,13 +62,20 @@ public class MnozenjeMatricaMain {
     }
 
     private static int[][] multipyMatrix(int[][] mat1, int[][] mat2) throws IllegalArgumentException {
+
         if(mat1.length != mat2.length) {
             throw new IllegalArgumentException("Matrices have to be of same size");
         }
 
         int n = mat1.length;
         int[][] product = new int[n][n];
-        AtomicInteger matrixSum = new AtomicInteger(0);
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                Thread thread = new Thread(new MatrixMultipier(i, j, mat1, mat2, product));
+                thread.start();
+            }
+        }
 
         return product;
     }

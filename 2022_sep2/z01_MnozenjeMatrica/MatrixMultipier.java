@@ -25,7 +25,7 @@ public class MatrixMultipier extends Thread {
         int dotProduct = 0;
 
         for (int i = 0; i < n; i++) {
-                dotProduct += mat1[this.col][i] * mat2[i][this.row];
+                dotProduct += mat1[this.row][i] * mat2[i][this.col];
         }
 
         this.productMatrix[this.row][this.col] = dotProduct;

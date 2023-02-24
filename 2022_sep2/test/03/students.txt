@@ -1,0 +1,4 @@
+123/2018 Petar Petrovic 8 6 9 10 6 8 7
+456/2019 Lazar Lazarevic 6 6 7 10 8 8 9 8 7 7 10
+789/2020 Aleksa Aleksic 8 8 10 6 6 7 9 8
+147/2021 Jovan Jovanovic 9 9 9 10 9 8 6
